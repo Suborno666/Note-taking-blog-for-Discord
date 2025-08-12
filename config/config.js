@@ -9,10 +9,10 @@ const config = {
     "username": process.env.DB_USERNAME,
     "password": process.env.DB_PASSWORD,
     // "database": process.env.DB_DATABASE,
+    "url": process.env.DB_CONNECTION_URL,
 }
 
 module.exports = {
-    url: process.env.DB_CONNECTION_URL,
     development: {...config, database: process.env.DB_DEVELOPMENT},
     test: { ...config, database: process.env.DB_TEST_NAME },
     production: { ...config, database: process.env.DB_PROD_NAME },
